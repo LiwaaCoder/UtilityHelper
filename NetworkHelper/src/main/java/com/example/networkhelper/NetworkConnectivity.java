@@ -25,7 +25,7 @@ public class NetworkConnectivity {
 
     private Context context;
     private final String TAG = "NetworkConnectivity";
-    private final int TIMEOUT_MS = 3000; 
+    private final int TIMEOUT_MS = 3000;
     private final String URL_TO_PING = "https://www.google.com";
 
     public NetworkConnectivity(Context context) {
@@ -46,35 +46,6 @@ public class NetworkConnectivity {
         }
     }
 
-    public void getNetworkSpeed(NetworkSpeedCallback callback) {
-        Executors.newSingleThreadExecutor().submit(() -> {
-            try {
-                String host = InetAddress.getByName("www.google.com").getHostAddress();
-                long startTime = System.currentTimeMillis();
-                Process process = Runtime.getRuntime().exec("/system/bin/ping -c 1 -w " + TIMEOUT_MS + " " + host);
-                int exitCode = process.waitFor();
-                long endTime = System.currentTimeMillis();
-                if (exitCode == 0) {
-                    double timeTaken = (double) (endTime - startTime) / 1000;
-                    double speed = (double) (8000) / timeTaken; // Speed in bits per second
-                    BigDecimal bd = new BigDecimal(speed).setScale(2, RoundingMode.HALF_UP);
-                    double roundedSpeed = bd.doubleValue() / 1000000; // Speed in Mbps
-                    callback.onSpeedReceived(roundedSpeed);
-                } else {
-                    callback.onSpeedReceived(-1);
-                }
-            } catch (UnknownHostException e) {
-                Log.e(TAG, "UnknownHostException: " + e.getMessage());
-                callback.onSpeedReceived(-1);
-            } catch (IOException e) {
-                Log.e(TAG, "IOException: " + e.getMessage());
-                callback.onSpeedReceived(-1);
-            } catch (InterruptedException e) {
-                Log.e(TAG, "InterruptedException: " + e.getMessage());
-                callback.onSpeedReceived(-1);
-            }
-        });
-    }
 
     public int getNetworkType() {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
