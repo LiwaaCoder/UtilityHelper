@@ -8,7 +8,7 @@ The Network Helper library provides a set of functions for checking network conn
 
 You can easily add this library to your project by adding the following dependency to your build.gradle file:
 
-```
+```groovy
 
 implementation 'com.github.LiwaaCoder:NetworkHelper:1.1.1'
 
@@ -20,7 +20,7 @@ To use the Network Helper library in your Java project, simply create an instanc
 
 java
 
-```
+```groovy
 NetworkConnectivity networkConnectivity = new NetworkConnectivity();
 if (networkConnectivity.isNetworkAvailable()) {
     String networkType = networkConnectivity.getNetworkType();
