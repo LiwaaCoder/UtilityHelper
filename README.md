@@ -1,7 +1,6 @@
 # NetworkHelper Library
 
 
-
 The Network Helper library provides a set of functions for checking network connectivity in Java applications. It includes functions for getting the network type, network usage, IP address, and checking network availability.
 
 ## Installation
@@ -14,7 +13,7 @@ implementation 'com.github.LiwaaCoder:NetworkHelper:1.1.1'
 
 ```
 
-Usage
+## Usage
 
 To use the Network Helper library in your Java project, simply create an instance of the NetworkConnectivity class and call the relevant functions. Here's an example:
 
@@ -33,7 +32,7 @@ if (networkConnectivity.isNetworkAvailable()) {
 
 ```
 
-API Reference
+## API Reference
 
 Here's a list of the functions provided by the Network Helper library:
 
@@ -42,6 +41,6 @@ Here's a list of the functions provided by the Network Helper library:
     getIpAddress() - This function returns the IP address of the device, which is used to identify it on the network.
     isNetworkAvailable() - This function returns a boolean value indicating whether the device is currently connected to a network and is able to access the internet.
 
-Contributing
+## Contributing
 
 If you have any suggestions or find any bugs, please feel free to open an issue or submit a pull request. Contributions are always welcome!
