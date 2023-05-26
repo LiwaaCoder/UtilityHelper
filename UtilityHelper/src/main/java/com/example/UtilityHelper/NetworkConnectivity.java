@@ -1,4 +1,4 @@
-package com.example.networkhelper;
+package com.example.UtilityHelper;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
