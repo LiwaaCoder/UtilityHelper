@@ -9,7 +9,7 @@ public class HttpUtility {
     private static final String BASE_URL = "https://api.example.com/";
     private static Retrofit retrofit;
 
-    private static Retrofit getRetrofitInstance() {
+    public  Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
@@ -24,7 +24,7 @@ public class HttpUtility {
         Call<String> sendGetRequest(@Url String url);
     }
 
-    public static void sendGetRequest(String url, retrofit2.Callback<String> callback) {
+    public  void sendGetRequest(String url, retrofit2.Callback<String> callback) {
         ApiService apiService = getRetrofitInstance().create(ApiService.class);
         Call<String> call = apiService.sendGetRequest(url);
         call.enqueue(callback);

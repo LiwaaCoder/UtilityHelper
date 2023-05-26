@@ -5,19 +5,19 @@ import java.util.Random;
 public class StringUtility {
 
     // Check if a string is empty or null
-    public static boolean isEmptyOrNull(String str) {
+    public  boolean isEmptyOrNull(String str) {
         return str == null || str.isEmpty();
     }
 
     // Trim leading and trailing whitespace from a string
-    public static String trimWhitespace(String str) {
+    public  String trimWhitespace(String str) {
         if (str == null) {
             return null;
         }
         return str.trim();
     }
 
-    public static String capitalizeFirstLetter(String str) {
+    public  String capitalizeFirstLetter(String str) {
         if (isEmptyOrNull(str)) {
             return str;
         }
@@ -25,7 +25,7 @@ public class StringUtility {
     }
 
     // Convert a string to title case (capitalize the first letter of each word)
-    public static String toTitleCase(String str) {
+    public  String toTitleCase(String str) {
         if (isEmptyOrNull(str)) {
             return str;
         }
@@ -43,7 +43,7 @@ public class StringUtility {
         return sb.toString();
     }
 
-    public static String generateRandomString(int length) {
+    public  String generateRandomString(int length) {
         String allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder sb = new StringBuilder(length);
         Random random = new Random();

@@ -3,7 +3,7 @@ package com.example.UtilityHelper;
 public class MathUtility {
 
     // Calculate the factorial of a number
-    public static int factorial(int n) {
+    public  int factorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Factorial is not defined for negative numbers.");
         }
@@ -15,7 +15,7 @@ public class MathUtility {
     }
 
     // Check if a number is prime
-    public static boolean isPrime(int number) {
+    public  boolean isPrime(int number) {
         if (number <= 1) {
             return false;
         }
