@@ -39,7 +39,7 @@ java
 
 ## API Reference
 
-Here's a list of the functions provided by the Network Helper library:
+Here's a list of the functions provided by the  UtilityHelper library:
 
 ```groovy
 
