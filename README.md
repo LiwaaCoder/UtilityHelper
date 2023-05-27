@@ -34,6 +34,24 @@ java
     PixelsUtility pixelsUtility = new PixelsUtility();
 
     MathUtility mathUtility = new MathUtility();
+    
+    
+    
+ // Example usage of StringUtility
+String input = "Hello, UtilityHelper!";
+boolean isEmpty = StringUtility.isNullOrEmpty(input);
+String trimmed = StringUtility.trimWhitespace(input);
+
+// Example usage of FileUtility
+File file = new File("path/to/file.txt");
+boolean exists = FileUtility.isFileExists(file);
+String content = FileUtility.readFileContent(file);
+
+// Example usage of DateUtility
+Date now = new Date();
+String formatted = DateUtility.formatDate(now, "yyyy-MM-dd HH:mm:ss");
+long difference = DateUtility.calculateDateDifference(now, otherDate);
+
 
 ```
 
